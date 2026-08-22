@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Restablecimiento de contraseña del Sistema de Gestión de Inventario I.T.R.">
+
+    <title>
+        I.T.R. - Restablecer contraseña
+    </title>
+
+
+    <!-- =========================================
+         CSS GENERAL
+         ========================================= -->
+
+    <link
+        rel="stylesheet"
+        href="../../css/variables.css">
+
+    <link
+        rel="stylesheet"
+        href="../../css/reset.css">
+
+    <link
+        rel="stylesheet"
+        href="../../css/global.css">
+
+    <link
+        rel="stylesheet"
+        href="../../css/buttons.css">
+
+    <link
+        rel="stylesheet"
+        href="../../css/modal.css">
+
+    <link
+        rel="stylesheet"
+        href="../../css/pages.css">
+
+</head>
+
+
+<body class="auth-page">
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <div id="auth-header-container"></div>
+
+
+    <!-- =========================================
+         CONTENIDO PRINCIPAL
+         ========================================= -->
+
+    <main class="auth-main">
+
+
+        <section
+            class="login-card"
+            aria-labelledby="reset-password-title">
+
+
+            <!-- =====================================
+                 IDENTIDAD
+                 ===================================== -->
+
+            <div class="login-brand">
+
+                <img
+                    src="../../assets/img/icons/Restablecer_Clave.png"
+                    alt="Restablecimiento de contraseña"
+                    class="login-logo">
+
+            </div>
+
+
+            <!-- =====================================
+                 TÍTULO Y DESCRIPCIÓN
+                 ===================================== -->
+
+            <div class="login-welcome">
+
+                <h1 id="reset-password-title">
+
+                    Restablecer contraseña
+
+                </h1>
+
+
+                <p>
+
+                    Ingrese su usuario para iniciar
+                    el proceso de restablecimiento.
+
+                </p>
+
+            </div>
+
+
+            <!-- =====================================
+                 MENSAJE
+                 ===================================== -->
+
+            <div
+                id="resetPasswordMessage"
+                class="form-message"
+                aria-live="polite"
+                aria-atomic="true"
+                hidden>
+            </div>
+
+
+            <!-- =====================================
+                 FORMULARIO
+                 ===================================== -->
+
+            <form
+                class="auth-form"
+                id="resetPasswordForm"
+                method="POST"
+                action="#"
+                novalidate>
+
+
+                <!-- =================================
+                     USUARIO
+                     ================================= -->
+
+                <div class="form-group">
+
+                    <label
+                        for="resetUsername"
+                        class="form-label">
+
+                        Usuario
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="resetUsername"
+                        name="username"
+                        class="form-input"
+                        placeholder="Ingrese su usuario"
+                        autocomplete="username"
+                        required>
+
+                </div>
+
+                <!-- NUEVA CONTRASEÑA -->
+
+                <div class="form-group">
+
+                    <label
+                        for="newPassword"
+                        class="form-label">
+
+                        Nueva contraseña
+
+                    </label>
+
+                    <input
+                        type="password"
+                        id="newPassword"
+                        name="newPassword"
+                        class="form-input"
+                        placeholder="Ingrese su nueva contraseña"
+                        minlength="6"
+                        autocomplete="new-password"
+                        required>
+
+                </div>
+
+
+                <!-- CONFIRMAR NUEVA CONTRASEÑA -->
+
+                <div class="form-group">
+
+                    <label
+                        for="confirmPassword"
+                        class="form-label">
+
+                        Confirmar nueva contraseña
+
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        class="form-input"
+                        placeholder="Confirme su nueva contraseña"
+                        minlength="6"
+                        autocomplete="new-password"
+                        required>
+
+                </div>
+
+
+                <!-- =================================
+                     BOTÓN RESTABLECER
+                     ================================= -->
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    <span
+                        aria-hidden="true">
+                        ↻
+                    </span>
+
+                    <span>
+                        Restablecer contraseña
+                    </span>
+
+                </button>
+
+
+                <!-- =================================
+                     SEPARADOR
+                     ================================= -->
+
+                <div class="auth-divider">
+
+                    <span>
+                        ¿Recordó su contraseña?
+                    </span>
+
+                </div>
+
+
+                <!-- =================================
+                     VOLVER AL LOGIN
+                     ================================= -->
+
+                <a
+                    href="../../index.html"
+                    class="btn btn-secondary">
+
+                    <span
+                        aria-hidden="true">
+                        ←
+                    </span>
+
+                    <span>
+                        Volver al inicio de sesión
+                    </span>
+
+                </a>
+
+
+            </form>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <div id="auth-footer-container"></div>
+
+
+    <!-- =========================================
+        JAVASCRIPT
+        ========================================= -->
+
+    <script src="../../js/auth.js"></script>
+
+    <script src="../../js/restablecer_clave.js"></script>
+
+</body>
+
+</html>

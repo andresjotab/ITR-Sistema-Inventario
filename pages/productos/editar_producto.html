@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I.T.R. - Editar Producto</title>
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/modal.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+</head>
+
+<body data-page="productos">
+
+    <div id="header-container"></div>
+
+    <div class="app-layout">
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+            <div class="container">
+
+                <header class="product-page-header">
+                    <a href="productos.html" class="back-link">← Volver</a>
+                    <h1>✏️ Editar Producto</h1>
+                </header>
+
+                <div class="product-form-wrapper">
+                    <form id="formProducto" method="POST" action="#">
+                        <div class="product-form-row">
+                            <div class="form-group">
+                                <label for="codigo">Código *</label>
+                                <input type="text" id="codigo" name="codigo" value="P001" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre">Nombre *</label>
+                                <input type="text" id="nombre" name="nombre" value="Busos" maxlength="100" required>
+                            </div>
+                        </div>
+
+                        <div class="product-form-row">
+                            <div class="form-group">
+                                <label for="categoria">Categoría *</label>
+                                <select id="categoria" name="categoria" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="Medias">Medias</option>
+                                    <option value="Busos" selected>Busos</option>
+                                    <option value="Pantalones">Pantalones</option>
+                                    <option value="Camisas">Camisas</option>
+                                    <option value="Chaquetas">Chaquetas</option>
+                                    <option value="Accesorios">Accesorios</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="precio">Precio *</label>
+                                <input type="number" id="precio" name="precio" value="45" step="0.01" min="0" required>
+                            </div>
+                        </div>
+
+                        <div class="product-form-row">
+                            <div class="form-group">
+                                <label for="stock">Cantidad *</label>
+                                <input type="number" id="stock" name="stock" value="15" step="1" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="estado">Estado *</label>
+                                <select id="estado" name="estado" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="Disponible" selected>Disponible</option>
+                                    <option value="Agotado">Agotado</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descripcion">Descripción</label>
+                            <textarea id="descripcion" name="descripcion" maxlength="500">Busos deportivos talla M</textarea>
+                        </div>
+
+                        <div class="product-form-actions">
+                            <a href="productos.html" class="btn btn-secondary">Cancelar</a>
+                            <button type="submit" class="btn btn-success">💾 Actualizar</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="../../js/app.js"></script>
+    <script src="../../js/navigation.js"></script>
+    <script>
+        document.getElementById('formProducto').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('✅ Producto actualizado');
+        });
+    </script>
+
+</body>
+
+</html>

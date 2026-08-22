@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Dashboard del Sistema de Gestión de Inventario I.T.R.">
+
+    <title>I.T.R. - Dashboard</title>
+
+
+    <!-- =========================================
+         CSS GENERAL
+         ========================================= -->
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/modal.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+
+
+
+</head>
+
+
+<body data-page="dashboard">
+
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <div id="header-container"></div>
+
+
+    <!-- =========================================
+         ESTRUCTURA PRINCIPAL
+         ========================================= -->
+
+    <div class="app-layout">
+
+
+        <!-- =====================================
+             SIDEBAR
+             ===================================== -->
+
+        <div id="sidebar-container"></div>
+
+
+        <!-- =====================================
+             CONTENIDO
+             ===================================== -->
+
+        <main class="main-content">
+
+            <div class="container">
+
+
+                <!-- =================================
+                     ENCABEZADO DEL DASHBOARD
+                     ================================= -->
+
+                <header class="dashboard-header">
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Resumen general del Sistema de Gestión
+                        de Inventario I.T.R.
+                    </p>
+
+                </header>
+
+
+                <!-- =================================
+                     TARJETAS DE RESUMEN
+                     ================================= -->
+
+                <section
+                    class="dashboard-stats"
+                    aria-label="Resumen del sistema">
+
+
+                    <!-- TOTAL PRODUCTOS -->
+
+                    <article class="dashboard-card">
+
+                        <p class="dashboard-card-title">
+                            Total productos
+                        </p>
+
+                        <p class="dashboard-card-value" id="totalProductos">
+                            0
+                        </p>
+
+                        <p class="dashboard-card-info">
+                            Productos registrados
+                        </p>
+
+                    </article>
+
+
+                    <!-- STOCK TOTAL -->
+
+                    <article class="dashboard-card">
+
+                        <p class="dashboard-card-title">
+                            Stock total
+                        </p>
+
+                        <p class="dashboard-card-value" id="stockTotal">
+                            0                        </p>
+
+                        <p class="dashboard-card-info">
+                            Unidades disponibles
+                        </p>
+
+                    </article>
+
+
+                    <!-- STOCK BAJO -->
+
+                    <article class="dashboard-card">
+
+                        <p class="dashboard-card-title">
+                            Stock bajo
+                        </p>
+
+                        <p class="dashboard-card-value" id="stockBajo">
+                            0
+                        </p>
+
+                        <p class="dashboard-card-info">
+                            Productos por revisar
+                        </p>
+
+                    </article>
+
+
+                    <!-- TOTAL USUARIOS -->
+
+                    <article class="dashboard-card">
+
+                        <p class="dashboard-card-title">
+                            Total usuarios
+                        </p>
+
+                        <p class="dashboard-card-value" id="totalUsuarios">
+                            0
+                        </p>
+
+                        <p class="dashboard-card-info">
+                            Usuarios registrados
+                        </p>
+
+                    </article>
+
+
+                </section>
+
+
+                <!-- =================================
+                     INFORMACIÓN INFERIOR
+                     ================================= -->
+
+                <div class="dashboard-grid">
+
+
+                    <!-- =============================
+                         ACTIVIDAD RECIENTE
+                         ============================= -->
+
+                    <section
+                        class="dashboard-section"
+                        aria-labelledby="activity-title">
+
+
+                        <h2
+                            id="activity-title"
+                            class="dashboard-section-title">
+
+                            Actividad reciente
+
+                        </h2>
+
+
+                        <ul class="activity-list">
+
+
+                            <li class="activity-item">
+
+                                <span
+                                    class="activity-icon"
+                                    aria-hidden="true">
+
+                                    +
+
+                                </span>
+
+                                <div class="activity-content">
+
+                                    <p class="activity-description">
+                                        Producto registrado
+                                    </p>
+
+                                    <p class="activity-date">
+                                        Sin actividad registrada
+                                    </p>
+
+                                </div>
+
+                            </li>
+
+
+                            <li class="activity-item">
+
+                                <span
+                                    class="activity-icon"
+                                    aria-hidden="true">
+
+                                    ↻
+
+                                </span>
+
+                                <div class="activity-content">
+
+                                    <p class="activity-description">
+                                        Inventario actualizado
+                                    </p>
+
+                                    <p class="activity-date">
+                                        Sin actividad registrada
+                                    </p>
+
+                                </div>
+
+                            </li>
+
+
+                            <li class="activity-item">
+
+                                <span
+                                    class="activity-icon"
+                                    aria-hidden="true">
+
+                                    👤
+
+                                </span>
+
+                                <div class="activity-content">
+
+                                    <p class="activity-description">
+                                        Usuario registrado
+                                    </p>
+
+                                    <p class="activity-date">
+                                        Sin actividad registrada
+                                    </p>
+
+                                </div>
+
+                            </li>
+
+
+                        </ul>
+
+                    </section>
+
+
+                    <!-- =============================
+                         MOVIMIENTO DE INVENTARIO
+                         ============================= -->
+
+                    <section
+                        class="dashboard-section"
+                        aria-labelledby="inventory-title">
+
+
+                        <h2
+                            id="inventory-title"
+                            class="dashboard-section-title">
+
+                            Movimiento de inventario
+
+                        </h2>
+
+
+                        <div class="inventory-chart">
+
+
+                            <!-- ENTRADAS -->
+
+                            <div class="inventory-row">
+
+                                <span class="inventory-label">
+                                    Entradas
+                                </span>
+
+                                <div
+                                    class="inventory-bar"
+                                    aria-hidden="true">
+
+                                    <div
+                                        class="inventory-bar-fill inventory-entry">
+                                    </div>
+
+                                </div>
+
+                                <span class="inventory-value">
+                                    0
+                                </span>
+
+                            </div>
+
+
+                            <!-- SALIDAS -->
+
+                            <div class="inventory-row">
+
+                                <span class="inventory-label">
+                                    Salidas
+                                </span>
+
+                                <div
+                                    class="inventory-bar"
+                                    aria-hidden="true">
+
+                                    <div
+                                        class="inventory-bar-fill inventory-exit">
+                                    </div>
+
+                                </div>
+
+                                <span class="inventory-value">
+                                    0
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <div id="footer-container"></div>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+
+        <script src="../../js/app.js"></script>
+        <script src="../../js/navigation.js"></script>
+        <script src="../../js/data.js"></script>
+        <script>
+            /* =========================================
+               DASHBOARD: indicadores desde DataService
+               ========================================= */
+            document.addEventListener('DOMContentLoaded', () => {
+                const productos = DataService.getProductos();
+                const usuarios = DataService.getUsuarios();
+
+                const totalProductos = document.getElementById('totalProductos');
+                const stockTotal = document.getElementById('stockTotal');
+                const stockBajo = document.getElementById('stockBajo');
+                const totalUsuarios = document.getElementById('totalUsuarios');
+
+                if (totalProductos) totalProductos.textContent = productos.length;
+                if (stockTotal) stockTotal.textContent = productos.reduce((acc, p) => acc + p.stock, 0);
+                if (stockBajo) stockBajo.textContent = productos.filter(p => p.stock < 10).length;
+                if (totalUsuarios) totalUsuarios.textContent = usuarios.length;
+            });
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,123 @@
+<header class="main-header">
+
+    <div class="header-left">
+
+        <!-- Botón menú móvil -->
+
+        <button
+            type="button"
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+            aria-controls="sidebar">
+
+            <span class="menu-icon">☰</span>
+
+        </button>
+
+
+        <!-- Identidad I.T.R. -->
+
+        <div
+            class="header-brand"
+            aria-label="Inicio I.T.R."
+            role="presentation">
+
+            <img
+                src="/assets/img/icons/logo-itr.png"
+                alt="I.T.R."
+                class="header-logo">
+
+            <div class="header-title">
+
+                <span class="brand-name">
+                    I.T.R.
+                </span>
+
+                <span class="brand-description">
+                    Sistema de Gestión de Inventario
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Acciones del usuario -->
+
+    <div class="header-right">
+
+        <button
+            type="button"
+            class="header-action"
+            aria-label="Notificaciones">
+
+            <span
+                class="header-action-icon"
+                aria-hidden="true">
+                🔔
+            </span>
+
+        </button>
+
+
+        <div class="user-menu">
+
+            <button
+                type="button"
+                class="user-button"
+                aria-label="Abrir menú de usuario"
+                aria-expanded="false"
+                aria-controls="userDropdown">
+
+                <span
+                    class="user-avatar"
+                    aria-hidden="true">
+                    👤
+                </span>
+
+                <span class="user-information">
+
+                    <span class="user-name">
+                        Usuario
+                    </span>
+
+                    <span class="user-role">
+                        Administrador
+                    </span>
+
+                </span>
+
+                <span
+                    class="user-arrow"
+                    aria-hidden="true">
+                    ▾
+                </span>
+
+            </button>
+
+            <div
+                id="userDropdown"
+                class="user-dropdown"
+                role="menu"
+                aria-label="Menú del usuario"
+                hidden>
+
+                <button
+                    type="button"
+                    class="user-menu-item"
+                    id="logoutButton"
+                    role="menuitem">
+                    Cerrar sesión
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>

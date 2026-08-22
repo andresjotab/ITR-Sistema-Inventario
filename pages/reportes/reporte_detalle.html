@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I.T.R. - Reporte</title>
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/modal.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+</head>
+
+<body data-page="reportes">
+
+    <div id="header-container"></div>
+
+    <div class="app-layout">
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+            <div class="container">
+
+                <header class="product-page-header">
+                    <a href="reportes.html" class="back-link">← Volver</a>
+                    <h1 id="reporteTitulo">Reporte</h1>
+                </header>
+
+                <!-- =========================================
+                     FILTROS DEL REPORTE
+                     ========================================= -->
+                <div class="product-form-wrapper">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>📅 Desde</label>
+                            <input type="date" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>📅 Hasta</label>
+                            <input type="date" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label>🔍 Buscar</label>
+                            <input type="text" class="form-input" placeholder="Buscar...">
+                        </div>
+                    </div>
+                    <div class="product-form-actions">
+                        <button type="button" class="btn btn-secondary">🧹 Limpiar</button>
+                        <button type="button" class="btn btn-primary">🔎 Generar</button>
+                        <button type="button" class="btn btn-success">📥 Exportar</button>
+                    </div>
+                </div>
+
+                <!-- =========================================
+                     RESULTADO DEL REPORTE
+                     ========================================= -->
+                <div class="product-table-wrapper" aria-label="Resultado del reporte">
+                    <table class="product-table">
+                        <thead id="reporteHead"></thead>
+                        <tbody id="reporteBody"></tbody>
+                    </table>
+                    <div class="product-table-footer">
+                        <span id="reporteTotal">Mostrando 0 registros</span>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <div id="footer-container"></div>
+    <script src="../../js/app.js"></script>
+    <script src="../../js/navigation.js"></script>
+    <script>
+        /* =========================================
+           DATOS DE LOS REPORTES
+           ========================================= */
+        const REPORTES = {
+
+            auditoria: {
+                titulo: 'Auditoría de Usuarios',
+                columnas: ['Fecha', 'Usuario', 'Acción', 'Detalle'],
+                filas: [
+                    ['14/08/2025', 'Carlos Pérez', 'Inicio de sesión', 'Acceso desde 192.168.1.10'],
+                    ['14/08/2025', 'Ana Gómez', 'Creación de producto', 'Producto P004 creado'],
+                    ['13/08/2025', 'Luis Mora', 'Actualización de stock', 'Stock de P001 actualizado'],
+                    ['12/08/2025', 'Invitado', 'Consulta de reporte', 'Reporte de ventas consultado']
+                ]
+            },
+
+            inventario: {
+                titulo: 'Inventario de Productos',
+                columnas: ['Código', 'Producto', 'Stock', 'Precio', 'Valor total'],
+                filas: [
+                    ['P001', 'Laptop', '15', '$800', '$12,000'],
+                    ['P002', 'Mouse', '45', '$25', '$1,125'],
+                    ['P003', 'Silla', '8', '$120', '$960']
+                ]
+            },
+
+            movimientos: {
+                titulo: 'Movimientos por Usuarios',
+                columnas: ['Fecha', 'Usuario', 'Tipo', 'Producto', 'Cantidad'],
+                filas: [
+                    ['14/08/2025', 'Carlos Pérez', 'Entrada', 'Laptop', '5'],
+                    ['13/08/2025', 'Ana Gómez', 'Salida', 'Mouse', '10'],
+                    ['12/08/2025', 'Luis Mora', 'Entrada', 'Silla', '3']
+                ]
+            },
+
+            ventas: {
+                titulo: 'Reporte de Ventas',
+                columnas: ['Fecha', 'Factura', 'Cliente', 'Vendedor', 'Total'],
+                filas: [
+                    ['14/08/2025', 'F-001', 'Empresa XYZ', 'Luis Mora', '$1,500'],
+                    ['13/08/2025', 'F-002', 'Cliente ABC', 'Luis Mora', '$250'],
+                    ['12/08/2025', 'F-003', 'Empresa XYZ', 'Ana Gómez', '$960']
+                ]
+            }
+        };
+
+        /* =========================================
+           CARGAR REPORTE SEGÚN EL PARÁMETRO
+           ========================================= */
+        function cargarReporte() {
+
+            const params = new URLSearchParams(window.location.search);
+            const tipo = params.get('tipo') || 'auditoria';
+            const reporte = REPORTES[tipo] || REPORTES.auditoria;
+
+            document.getElementById('reporteTitulo').textContent = '📈 ' + reporte.titulo;
+            document.title = 'I.T.R. - ' + reporte.titulo;
+
+            const head = document.getElementById('reporteHead');
+            const body = document.getElementById('reporteBody');
+            head.innerHTML = '';
+            body.innerHTML = '';
+
+            const filaEncabezado = document.createElement('tr');
+            reporte.columnas.forEach(function (columna) {
+                const th = document.createElement('th');
+                th.textContent = columna;
+                filaEncabezado.appendChild(th);
+            });
+            head.appendChild(filaEncabezado);
+
+            reporte.filas.forEach(function (fila) {
+                const tr = document.createElement('tr');
+                fila.forEach(function (celda) {
+                    const td = document.createElement('td');
+                    td.textContent = celda;
+                    tr.appendChild(td);
+                });
+                body.appendChild(tr);
+            });
+
+            document.getElementById('reporteTotal').textContent =
+                'Mostrando ' + reporte.filas.length + ' de ' + reporte.filas.length + ' registros';
+        }
+
+        document.addEventListener('DOMContentLoaded', cargarReporte);
+    </script>
+
+</body>
+
+</html>
