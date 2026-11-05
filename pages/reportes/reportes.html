@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I.T.R. - Reportes</title>
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/modal.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+</head>
+
+<body data-page="reportes">
+
+    <div id="header-container"></div>
+
+    <div class="app-layout">
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+            <div class="container">
+
+                <header class="product-page-header">
+                    <h1>📈 Reportes</h1>
+                    <p class="text-muted">Informes y estadísticas del sistema</p>
+                </header>
+
+                <!-- =========================================
+                     REPORTES DISPONIBLES
+                     ========================================= -->
+                <section class="dashboard-stats" aria-label="Reportes disponibles">
+
+                    <article class="dashboard-card">
+                        <p class="dashboard-card-title">👤 Auditoría de Usuarios</p>
+                        <p class="dashboard-card-info">Historial de acciones realizadas por los usuarios en la
+                            plataforma</p>
+                        <a href="reporte_detalle.html?tipo=auditoria" class="btn btn-primary">Ver reporte</a>
+                    </article>
+
+                    <article class="dashboard-card">
+                        <p class="dashboard-card-title">📦 Inventario de Productos</p>
+                        <p class="dashboard-card-info">Stock actual y valorización de los productos</p>
+                        <a href="reporte_detalle.html?tipo=inventario" class="btn btn-primary">Ver reporte</a>
+                    </article>
+
+                    <article class="dashboard-card">
+                        <p class="dashboard-card-title">🔄 Movimientos por Usuarios</p>
+                        <p class="dashboard-card-info">Entradas y salidas de inventario registradas por cada usuario</p>
+                        <a href="reporte_detalle.html?tipo=movimientos" class="btn btn-primary">Ver reporte</a>
+                    </article>
+
+                    <article class="dashboard-card">
+                        <p class="dashboard-card-title">💰 Reporte de Ventas</p>
+                        <p class="dashboard-card-info">Resumen de ventas por período</p>
+                        <a href="reporte_detalle.html?tipo=ventas" class="btn btn-primary">Ver reporte</a>
+                    </article>
+
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="../../js/app.js"></script>
+    <script src="../../js/navigation.js"></script>
+
+</body>
+
+</html>

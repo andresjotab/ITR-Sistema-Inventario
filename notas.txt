@@ -1,0 +1,112 @@
+NOTAS DEL PROYECTO - Árbol y listado organizado
+Fecha: 2026-08-09T22:24:23 -05:00
+Ruta raíz:
+C:\Users\andre\OneDrive\Desktop\SENA\Guia de Aprendizaje 5\Actividad de aprendizaje GA5-220501095-AA1\Evidencia GA5-220501095-AA1-EV04. Maquetación de la interfaz gráfica en HTML\ITR-Sistema-Inventario
+
+--- Árbol (archivos y carpetas) ---
+C:\USERS\ANDRE\ONEDRIVE\DESKTOP\SENA\GUIA DE APRENDIZAJE 5\ACTIVIDAD DE APRENDIZAJE GA5-220501095-AA1\EVIDENCIA GA5-220501095-AA1-EV04. MAQUETACIÓN DE LA INTERFAZ GRÁFICA EN HTML\ITR-SISTEMA-INVENTARIO
+|   index.html
+|   
++---.vscode
+|       settings.json
+|       
++---assets
+|   +---docs
+|   +---fonts
+|   \---img
+|       \---icons
+|               logo-itr.png
+|               
++---components
+|       footer.html
+|       header.html
+|       sidebar.html
+|       
++---css
+|       components.css
+|       feedback.css
+|       global.css
+|       header.css
+|       layout.css
+|       modal.css
+|       reset.css
+|       responsive.css
+|       sidebar.css
+|       variables.css
+|       
++---js
+|   |   app.js
+|   |   navigation.js
+|   |   ui.js
+|   |   
+|   +---administracion
+|   +---auth
+|   +---ayuda
+|   +---productos
+|   +---reportes
+|   \---roles
+\---pages
+    +---administracion
+    +---auth
+    +---ayuda
+    +---dashboard
+    +---productos
+    +---reportes
+    \---roles
+
+--- Detalle organizado por carpeta ---
+[Raíz]
+- index.html
+
+[.vscode]
+- settings.json
+
+[assets]
+- docs/ (carpeta)
+- fonts/ (carpeta)
+- img/icons/
+  - logo-itr.png
+
+[components]
+- footer.html
+- header.html
+- sidebar.html
+
+[css]
+- components.css
+- feedback.css
+- global.css
+- header.css
+- layout.css
+- modal.css
+- reset.css
+- responsive.css
+- sidebar.css
+- variables.css
+
+[js]
+- app.js
+- navigation.js
+- ui.js
+Subcarpetas (sin archivos listados en el árbol):
+- administracion/
+- auth/
+- ayuda/
+- productos/
+- reportes/
+- roles/
+
+[pages]
+Subcarpetas (sin archivos listados en el árbol):
+- administracion/
+- auth/
+- ayuda/
+- dashboard/
+- productos/
+- reportes/
+- roles/
+
+--- Notas adicionales ---
+- Las carpetas enumeradas como "(sin archivos listados en el árbol)" podrían contener archivos si no fueron incluidos por el comando "tree" (por ejemplo si están vacías o contienen archivos ocultos). Si deseas, se puede generar un listado recursivo detallado de una subcarpeta en particular.
+
+¿Deseas que abra y muestre el contenido de este archivo ahora, o que lo descargue/prepare de otra forma? Si prefieres otro nombre o formato (por ejemplo notas.md), indícalo y lo actualizo.

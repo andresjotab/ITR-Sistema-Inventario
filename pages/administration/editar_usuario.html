@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I.T.R. - Editar Usuario</title>
+
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/buttons.css">
+    <link rel="stylesheet" href="../../css/modal.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+</head>
+
+<body data-page="administracion">
+
+    <div id="header-container"></div>
+
+    <div class="app-layout">
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+            <div class="container">
+
+                <header class="product-page-header">
+                    <a href="usuarios.html" class="back-link">← Volver</a>
+                    <h1>✏️ Editar Usuario</h1>
+                </header>
+
+                <div class="product-form-wrapper">
+                    <form id="formUsuario" method="POST" action="#">
+                        <div class="product-form-row">
+                            <div class="form-group">
+                                <label for="usuario_id">ID *</label>
+                                <input type="text" id="usuario_id" name="id" value="01" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre">Nombre *</label>
+                                <input type="text" id="nombre" name="nombre" value="Carlos Pérez" maxlength="100" autocomplete="name" required>
+                            </div>
+                        </div>
+
+                        <div class="product-form-row">
+                            <div class="form-group">
+                                <label for="correo">Correo *</label>
+                                <input type="email" id="correo" name="correo" value="carlos@itr.com" maxlength="100" autocomplete="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="rol">Rol *</label>
+                                <select id="rol" name="rol" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="Admin" selected>Admin</option>
+                                    <option value="Supervisor">Supervisor</option>
+                                    <option value="Vendedor">Vendedor</option>
+                                    <option value="Invitado">Invitado</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="product-form-row">
+                            <div class="form-group">
+                                <label for="estado">Estado *</label>
+                                <select id="estado" name="estado" required>
+                                    <option value="">Seleccione</option>
+                                    <option value="Activo" selected>Activo</option>
+                                    <option value="Inactivo">Inactivo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="creado">Creado</label>
+                                <input type="text" id="creado" name="creado" value="14/08/2025" readonly>
+                            </div>
+                        </div>
+
+                        <div class="product-form-actions">
+                            <a href="usuarios.html" class="btn btn-secondary">Cancelar</a>
+                            <button type="submit" class="btn btn-success">💾 Actualizar</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="../../js/app.js"></script>
+    <script src="../../js/navigation.js"></script>
+    <script>
+        document.getElementById('formUsuario').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('✅ Usuario actualizado');
+        });
+    </script>
+
+</body>
+
+</html>
